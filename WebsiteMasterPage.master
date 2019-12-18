@@ -1,0 +1,417 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="WebsiteMasterPage.master.cs" Inherits="WebsiteMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap&subset=vietnamese" rel="stylesheet">
+    <%--<!-- Begin SEO -->
+    <!-- Primary Meta Tags -->
+    <title>B&B | COFFEE AND MILK TEA</title>
+    <link rel="icon" href="/images/logob.png" type="image/x-icon" />
+    <meta name="title" content="ThaiMarket | MilkTea">
+    <meta name="description" content="">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="ThaiMarket | MilkTea">
+    <meta property="og:description" content="ThaiMarket | MilkTea">
+    <meta property="og:image" content="/images/img2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="/images/img2.png">
+
+    <!-- End SEO -->--%>
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/datepicker.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/jquery.formstyler.css" rel="stylesheet">
+    <link href="/css/extralayers.css" rel="stylesheet">
+    <link href="/css/settings.css" rel="stylesheet">
+    <link href="/css/owl.carousel.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/slick-theme.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
+    <link href="/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <link href="/css/demo.css" rel="stylesheet" />
+    <script src="/admin_js/sweetalert.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="headlink" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--<link rel="icon" href="/logobb.ico" type="image/x-icon" /--%>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body class="body_index">
+    <div id="pre-loader">
+        <div class="loader-holder">
+            <div class="frame">
+                <img src="/images/Preloader.gif" alt="B&B Drink and Milk" />
+            </div>
+        </div>
+    </div>
+    <form runat="server">
+        <asp:ScriptManager ID="sm" runat="server"></asp:ScriptManager>
+        <div class="mainpage-main">
+            <header>
+                <div class="header-part header-reduce sticky">
+                    <div class="header-top">
+                        <div class="container">
+                            <div class="header-top-inner">
+                                <%--<div class="header-top-left">
+                                    <asp:Repeater runat="server" ID="rp_Contact">
+                                        <ItemTemplate>
+                                            <a href="#" class="top-cell">
+                                                <img src="/images/fon.png" alt="">
+                                                <span><%#Eval("lienhe_phone") %></span></a>
+                                            <a href="#" class="top-email"><span><%#Eval("lienhe_email") %></span></a>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </div>--%>
+                                <div class="header-top-right">
+                                    <div class="social-top">
+                                        <ul>
+                                            <asp:Repeater runat="server" ID="rp_MXH">
+                                                <ItemTemplate>
+                                                    <li><a href="<%#Eval("ketnoimxh_facebook") %>" target="_blank">
+                                                        <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                    <li><a href="<%#Eval("ketnoimxh_twitter") %>" target="_blank">
+                                                        <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                    <li><a href="<%#Eval("ketnoimxh_instagram") %>" target="_blank">
+                                                        <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                    <li><a href="<%#Eval("ketnoimxh_google") %>" target="_blank">
+                                                        <i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="header-top-right">
+                                        <%--<div class="social-top">
+                                            <<asp:Repeater runat="server" ID="rp_MXH">
+                                                <ItemTemplate>
+                                                    <li><a href="<%#Eval("ketnoimxh_facebook") %>" target="_blank">
+                                                        <img src="/images/facebook-logo.png" /></a></li>
+                                                    <li><a href="<%#Eval("ketnoimxh_twitter") %>" target="_blank">
+                                                        <img src="/images/twitter (1).png" /></a></li>
+                                                    <li><a href="<%#Eval("ketnoimxh_instagram") %>" target="_blank">
+                                                        <img src="/images/instagram (1).png" /></a></li>
+                                                    <li><a href="<%#Eval("ketnoimxh_google") %>" target="_blank">
+                                                        <img src="/images/google.png" /></a></li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </div>--%>
+                                        <div class="book-table header-collect ">
+                                            <a href="#" data-toggle="modal" data-target="#booktable">
+                                                <img src="/images/icon-table.png" alt="">HOTLINE</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-bottom">
+                        <div class="container">
+                            <div class=" header-info ">
+                                <div class="header-info-inner hidden-sm hidden-xs">
+                                    <ul>
+                                        <li class="has-child"><a class="clickid" href="/#news" data-ref="#news">Tin Tức</a></li>
+                                        <li class="has-child"><a class="clickid" href="/#photos" data-ref="#photos">Hình Ảnh</a></li>
+                                        <li class="has-child"><a class="clickid" href="/#feedbacks" data-ref="#feedbacks">Phản Hồi Khách Hàng</a></li>
+                                        <li class="has-child"><a href="~/../../contact">Liên Hệ</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                            <div class="menu-icon">
+                                <a href="#" class="hambarger">
+                                    <span class="bar-1"></span>
+                                    <span class="bar-2"></span>
+                                    <span class="bar-3"></span>
+                                </a>
+                            </div>
+
+                            <div class="menu-main">
+                                <ul>
+                                    <li class="has-child">
+                                        <a href="/">Trang Chủ</a>
+                                    </li>
+                                    <li class="has-child">
+                                        <a class="clickid" href="/#about-us" data-ref="#about-us">Về B&B</a>
+                                    </li>
+                                    <li class="has-child">
+                                        <a class="clickid" href="/#menu" data-ref="#menu">Thực Đơn</a>
+                                    </li>
+                                    <li class="has-child">
+                                        <a class="clickid" href="/#branchs" data-ref="#branchs">Hệ Thống B&B</a>
+                                    </li>
+                                    <%--<li class="has-child">
+                                        <a href="~/../../sale">Khuyến Mãi</a>
+                                    </li>--%>
+
+                                    <li class="has-child hidden-lg hidden-md"><a class="clickid" href="/#news" data-ref="#news">Tin Tức</a></li>
+                                    <li class="has-child hidden-lg hidden-md"><a class="clickid" href="/#photos" data-ref="#photos">Hình Ảnh</a></li>
+                                    <li class="has-child hidden-lg hidden-md"><a class="clickid" href="/#feedbacks" data-ref="#feedbacks">Phản Hồi Khách Hàng</a></li>
+                                    <li class="has-child hidden-lg hidden-md"><a href="~/../../contact">Liên Hệ</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="/images/logob.png" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="modal fade booktable" id="booktable" tabindex="-1" role="dialog" aria-labelledby="booktable">
+                <asp:UpdatePanel ID="upCity" runat="server">
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="ddlCity" EventName="SelectedIndexChanged" />
+                    </Triggers>
+                    <ContentTemplate>
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="table-title">
+                                    <h2>Danh sách cửa hàng</h2>
+                                </div>
+                                <div class="row">
+                                    <%-- <div class="search-box">
+                                        <input type="text" name="txt" placeholder="Search">
+                                        <input type="submit" name="submit" value=" ">
+                                </div>--%>
+                                    <div class="col-md-6 col-md-offset-3 text-center ">
+
+                                        <div class="custom-select">
+                                            <asp:DropDownList ID="ddlCity" runat="server" CssClass="" AutoPostBack="true" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged"></asp:DropDownList>
+                                            <%--<select>
+                                                <option >Đà Nẳng</option>
+                                                <option >Huế</option>
+                                                <option >Quảng Nam</option>
+                                                <option >Quảng Bình</option>
+                                        </select>--%>
+                                        </div>
+                                    </div>
+                                    <div class=" text-center">
+                                        <h2 style="color: #ff1a1a">HOTLINE</h2>
+                                        <div class="hotline col-md-6 col-md-offset-4">
+                                            <asp:Repeater ID="rpCity" runat="server">
+                                                <ItemTemplate>
+                                                    <a href="tel:<%#Eval("restaurant_phone") %>">
+                                                        <img src="/images/telephone.png" /><%#Eval("restaurant_phone") %></a>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <%-- End Start table --%>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="hihead" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="himenu" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="higlobal" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="hislider" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="hibelowtop" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="hibodyhead" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="hibodywrapper" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="hibodybottom" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="hibelowbottom" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        <footer>
+            <div class="footer-part wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="icon-default icon-dark logo-footer">
+                    <img src="/images/footer-logo2.png" alt="">
+                </div>
+                <div class="container">
+                    <div class="row" style="display: none;">
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12">
+                            <form class="form-lienhe">
+                                <div class="form-parent">
+                                    <div class="form-group">
+                                        <div class="form-group-title">
+                                            <h4 class="text-title text-center">Liên Hệ</h4>
+                                            <p class="text-lienhe text-center">
+                                                Liên hệ một số Hotface để “nhờ” chụp ảnh check-in tại quán.
+                                            </p>
+                                        </div>
+                                        <div class="form-group-body">
+                                            <input class="form-control" placeholder="Họ và Tên" type="text" name="name" value="" />
+                                            <input class="form-control" placeholder="Email" type="text" name="name" value="" />
+                                            <input class="form-control" placeholder="Tiêu Đề" type="text" name="name" value="" />
+                                        </div>
+                                        <textarea rows="4" cols="33" placeholder="Nội Dung ..."></textarea>
+                                        <div class="form-group submit">
+                                            <button type="submit" class="btn btn-warning">Gửi</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <h4 class="titler-footer">Liên Hệ Với Chúng Tôi
+                            </h4>
+                            <asp:Repeater ID="rpContact" runat="server">
+                                <ItemTemplate>
+                                    <p class="text-footer">
+                                        <i class="fa fa-home"></i>&nbsp;<%#Eval("lienhe_address")%>
+                                    </p>
+                                    <p class="text-footer">
+                                        <i class="fa fa-phone"></i>&nbsp;<%#Eval("lienhe_phone")%>
+                                    </p>
+                                    <p class="text-footer">
+                                        <i class="fa fa-envelope"></i>&nbsp;<%#Eval("lienhe_email")%>
+                                    </p>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <%--<div class="input-footer ">
+                                <h4 class="titler-footer">Nhận Đăng Ký Từ Bản Tin</h4>
+                                <div class="input-group form-group submitt ">
+                                    <input type="text" class="form-control" id="txt_Email" runat="server" placeholder="Email..." />
+                                    <span class="input-group-btn">
+                                        <asp:UpdatePanel runat="server" ID="up_Email">
+                                            <ContentTemplate>
+                                                <button type="button" class="btn btn-warning" id="btn_Send_Admin" runat="server" onserverclick="btn_Send_Admin_ServerClick">Gửi</button>
+
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </span>
+                                </div>
+
+                            </div>--%>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 "></div>
+                        <div class="face-footer col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div id="fb-root">
+                                <div class="fb-page" data-href="https://www.facebook.com/BB-Coffee-MilkTea-100700801338070/" data-tabs="" data-width="400px" data-height="200px" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false">
+                                    <blockquote cite="https://www.facebook.com/BB-Coffee-MilkTea-100700801338070/" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/BB-Coffee-MilkTea-100700801338070/">B&B Coffee & MilkTea</a>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 copyright-before">
+                            <span>Copyright © 2019. All rights reserved. </span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 copyright-after">
+                            <div class="content-us">
+                                <div class="social-round">
+                                    <ul>
+                                        <asp:Repeater runat="server" ID="rp_MXHFooter">
+                                            <ItemTemplate>
+                                                <li><a href="<%#Eval("ketnoimxh_facebook") %>" target="_blank">
+                                                    <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                <li><a href="<%#Eval("ketnoimxh_twitter") %>" target="_blank">
+                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                    <li><a href="<%#Eval("ketnoimxh_instagram") %>" target="_blank">
+                                                        <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                                    <li><a href="<%#Eval("ketnoimxh_google") %>" target="_blank">
+                                                        <i class="fa fa-google" aria-hidden="true"></i></li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <%--<div class="social-round">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>--%>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-find">
+                    <a href="~/../../map">
+                        <img src="/images/location.png" alt="">
+                        <span>Chúng tôi trên bản đồ</span>
+                    </a>
+                </div>
+                <%--                <div class="location-footer-map">
+                    <div class="icon-find-location">
+                        <a href="#">
+                            <img src="/images/location.png" alt="">
+                            <span>Find us on Map</span>
+                        </a>
+                    </div>
+                    <div class="footer-map-outer">
+                        <div id="footer-map"></div>
+                    </div>
+                </div>--%>
+            </div>
+        </footer>
+        <%-- Start table --%>
+
+        <a href="#" class="top-arrow"></a>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap-datepicker.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2Zb2vY8-t_9BUYqFFjc9LQiNWUZPLft4"></script>
+        <script src="/js/jquery.formstyler.min.js"></script>
+        <script src="/js/jquery.themepunch.plugins.min.js"></script>
+        <script src="/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
+        <script src="/js/slick.min.js"></script>
+        <script src="/js/isotop.js"></script>
+        <script src="/js/packery-mode.pkgd.min.js"></script>
+        <script src="/js/jquery.magnific-popup.min.js"></script>
+        <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="/js/wow.min.js"></script>
+        <script src="/js/jquery.stellar.js"></script>
+        <script src="/js/app.js"></script>
+        <script src="/js/script.js"></script>
+
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0"></script>
+        <asp:ContentPlaceHolder ID="hifooter" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
